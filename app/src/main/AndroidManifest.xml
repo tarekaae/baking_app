@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tarek.nanodegree.bakingapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".view.RecipeListActivity"
+            android:label="@string/title_recipe_list"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".BackingAppWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/backing_app_widget_info" />
+        </receiver>
+
+
+        <activity
+            android:name=".view.phase2.StepListActivity"
+            android:label="@string/title_step_list"
+            android:parentActivityName=".view.RecipeListActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.tarek.nanodegree.bakingapp.view.RecipeListActivity" />
+        <activity
+
+            android:name=".view.phase2.StepDetailActivity"
+            android:label="@string/title_step_detail"
+            android:parentActivityName=".view.phase2.StepListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.tarek.nanodegree.bakingapp.view.phase2.StepListActivity" />
+        </activity>
+    </application>
+
+</manifest>

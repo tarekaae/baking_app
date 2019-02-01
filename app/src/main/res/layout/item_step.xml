@@ -1,0 +1,28 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardStep"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="7dp"
+    android:elevation="6dp">
+
+    <LinearLayout
+        android:id="@+id/stepLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/step"
+            style="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Step short Discription"
+            android:textIsSelectable="true" />
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>
+
+
